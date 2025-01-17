@@ -1,22 +1,28 @@
 {
-  "name": "nodejs-express",
+  "name": "rest-api",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/tjswjd0218/Nodejs-Express.git",
-  "author": "tjswjd0218 <tjswjd0218@gmail.com>",
-  "license": "MIT",
+  "type": "module",
   "scripts": {
-    "test": "node src/index.js",
-    "dev": "babel-node src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.26.4",
     "@babel/core": "^7.26.0",
     "@babel/node": "^7.26.0",
-    "@babel/preset-env": "^7.26.0"
+    "@babel/preset-env": "^7.26.0",
+    "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2"
   },
   "babel": {
     "presets": [
@@ -24,3 +30,4 @@
     ]
   }
 }
+
