@@ -1,4 +1,4 @@
-import UserController from "./users/index.js";
+const UserController = require('./users');
 
 // Routers (컨트롤러들)
-export default [UserController];
+module.exports = [UserController];
