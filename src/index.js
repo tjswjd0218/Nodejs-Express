@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
 const Controllers = require('./controllers');
-const { swaggerDocs, options } = require('./controllers/swagger/index.js');
+const { swaggerDocs, options } = require('./swagger');
 const swaggerUi = require('swagger-ui-express');
 
 const app = express();

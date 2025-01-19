@@ -8,9 +8,9 @@ const userController = {
     users: [
         {
             id: 1,
-            firstName: "",
-            lastName: "",
-            age: 35
+            firstName: "Troye",
+            lastName: "Sivan",
+            age: 17
         }
     ],
 
@@ -25,7 +25,8 @@ const userController = {
     getUsers(req, res, next){
         try {
             const users = this.users.map((user) => new UserDTO(user));
-        res.status(200).json({ users: this.users })
+
+            res.status(200).json({ users: this.users })
         } catch(err) {
             next(err)
         }
@@ -36,9 +37,11 @@ const userController = {
         const { id } = req.params;
         const targetUser = this.users.find(user => user.id === Number(id));
 
-        if(!targetUser) 
+        if(!targetUser) {
             throw { status: 404, message: "유저를 찾을 수 없습니다."}
+        }
         const user = new UserDTO(targetUser);
+
         res.status(200).json({ user });
         } catch(err) {
             next(err);
@@ -55,8 +58,8 @@ const userController = {
                 throw { status: 404, message: "유저를 찾을 수 없습니다." };
             }
             const user = new UserDTO(targetUser);
-            res.status(200).json({ fullName: user.getFullName() });
 
+            res.status(200).json({ fullName: user.getFullName() });
         } catch(err) {
             next(err);
         }
