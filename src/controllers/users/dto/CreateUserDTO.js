@@ -1,4 +1,4 @@
-class CreateUserDTO {
+export class createUserDTO {
     firstName;
     lastName;
     age;
@@ -15,8 +15,6 @@ class CreateUserDTO {
             firstName: this.firstName,
             lastName: this.lastName,
             age: this.age
-        };
+        }
     }
 }
-
-module.exports = CreateUserDTO;

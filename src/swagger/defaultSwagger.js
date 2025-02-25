@@ -7,4 +7,4 @@ const defaultSwagger = {
     }
 };
 
-module.exports = defaultSwagger;
+export default defaultSwagger;
