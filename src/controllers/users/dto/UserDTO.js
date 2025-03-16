@@ -1,4 +1,9 @@
-class UserDTO {
+export class UserDTO {
+    id;
+    firstName;
+    lastName;
+    age;
+
     constructor(user) {
         this.id = user.id;
         this.firstName = user.firstName;
@@ -10,5 +15,3 @@ class UserDTO {
         return `${this.firstName} ${this.lastName}`;
     }
 }
-
-module.exports = UserDTO;

@@ -1,1 +1,1 @@
-const { UserDTO, CreateUserDTO } = require('./dto');
+export * from "./UserDTO";
